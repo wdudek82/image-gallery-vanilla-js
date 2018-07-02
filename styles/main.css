@@ -1,0 +1,49 @@
+body {
+  margin: 20px;
+  padding: 0;
+  background: #333;
+}
+
+.container {
+  max-width: 760px;
+  margin: auto;
+  border: 3px solid #fff;
+  background: #fff;
+}
+
+.main-img {
+  max-height: 490px;
+  overflow: hidden;
+}
+
+#current {
+  filter: opacity(1);
+}
+
+.fading {
+  animation: fadeout 0.5s ease-in forwards;
+}
+
+@keyframes fadeout {
+  from { filter: opacity(0) }
+  to { filter: opacity(1) }
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  border-top: 3px solid #fff;
+}
+
+.imgs img {
+  transition: filter 1s;
+}
+
+.imgs img:hover {
+}
